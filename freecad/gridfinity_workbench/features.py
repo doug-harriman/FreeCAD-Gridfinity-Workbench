@@ -199,7 +199,7 @@ class BinBlank(FoundationGridfinity):
             "App::PropertyLength",
             "MagnetHoleDiameter",
             "GridfinityNonStandard",
-            "Diameter of Magnet Holes <br> <br> default = 6.5 mm",
+            "Diameter of Magnet Holes <br>For Hex holes, inscribed diameter<br> <br> default = 6.5 mm",
         ).MagnetHoleDiameter = MAGNET_HOLE_DIAMETER
         obj.addProperty(
             "App::PropertyLength",
@@ -426,7 +426,7 @@ class BinBase(FoundationGridfinity):
             "App::PropertyLength",
             "MagnetHoleDiameter",
             "GridfinityNonStandard",
-            "Diameter of Magnet Holes <br> <br> default = 6.5 mm",
+            "Diameter of Magnet Holes <br>For Hex holes, inscribed diameter<br> <br> default = 6.5 mm",
         ).MagnetHoleDiameter = MAGNET_HOLE_DIAMETER
         obj.addProperty(
             "App::PropertyLength",
@@ -669,7 +669,7 @@ class SimpleStorageBin(FoundationGridfinity):
             "App::PropertyLength",
             "MagnetHoleDiameter",
             "GridfinityNonStandard",
-            "Diameter of Magnet Holes <br> <br> default = 6.5 mm",
+            "Diameter of Magnet Holes <br>For Hex holes, inscribed diameter<br> <br> default = 6.5 mm",
         ).MagnetHoleDiameter = MAGNET_HOLE_DIAMETER
         obj.addProperty(
             "App::PropertyLength",
@@ -993,7 +993,7 @@ class EcoBin(FoundationGridfinity):
             "App::PropertyLength",
             "MagnetHoleDiameter",
             "GridfinityNonStandard",
-            "Diameter of Magnet Holes <br> <br> default = 6.5 mm",
+            "Diameter of Magnet Holes <br>For Hex holes, inscribed diameter<br> <br> default = 6.5 mm",
         ).MagnetHoleDiameter = MAGNET_HOLE_DIAMETER
         obj.addProperty(
             "App::PropertyLength",
@@ -1296,7 +1296,7 @@ class PartsBin(FoundationGridfinity):
             "App::PropertyLength",
             "MagnetHoleDiameter",
             "GridfinityNonStandard",
-            "Diameter of Magnet Holes <br> <br> default = 6.5 mm",
+            "Diameter of Magnet Holes <br>For Hex holes, inscribed diameter<br> <br> default = 6.5 mm",
         ).MagnetHoleDiameter = MAGNET_HOLE_DIAMETER
         obj.addProperty(
             "App::PropertyLength",
@@ -1746,7 +1746,7 @@ class MagnetBaseplate(FoundationGridfinity):
             "App::PropertyLength",
             "MagnetHoleDiameter",
             "NonStandard",
-            "Diameter of Magnet Holes <br> <br> default = 6.5 mm",
+            "Diameter of Magnet Holes <br>For Hex holes, inscribed diameter<br> <br> default = 6.5 mm",
         ).MagnetHoleDiameter = MAGNET_HOLE_DIAMETER
         obj.addProperty(
             "App::PropertyLength", "MagnetHoleDepth", "NonStandard", "Depth of Magnet Holes <br> <br> default = 2.4 mm"
@@ -1937,7 +1937,7 @@ class ScrewTogetherBaseplate(FoundationGridfinity):
             "App::PropertyLength",
             "MagnetHoleDiameter",
             "NonStandard",
-            "Diameter of Magnet Holes <br> <br> default = 6.5 mm",
+            "Diameter of Magnet Holes <br>For Hex holes, inscribed diameter<br> <br> default = 6.5 mm",
         ).MagnetHoleDiameter = MAGNET_HOLE_DIAMETER
         obj.addProperty(
             "App::PropertyLength", "MagnetHoleDepth", "NonStandard", "Depth of Magnet Holes <br> <br> default = 2.4 mm"

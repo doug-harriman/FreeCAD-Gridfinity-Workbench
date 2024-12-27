@@ -2,6 +2,7 @@ from FreeCAD import Units
 import Part
 import math
 import FreeCAD as App
+import numpy as np
 
 unitmm = Units.Quantity("1 mm")
 zeromm = Units.Quantity("0 mm")
@@ -800,6 +801,11 @@ def MakeBottomHoles(self, obj):
 
     xtranslate = zeromm
     ytranslate = zeromm
+
+    # Ratio of 2/sqrt(3) converts from inscribed circle radius to circumscribed circle radius
+    # radius = (obj.MagnetHoleDiameter / 2 ) * 2 / np.sqrt(3)
+    radius = obj.MagnetHoleDiameter / np.sqrt(3)
+
     if obj.MagnetHoles:
         for x in range(obj.xGridUnits):
             ytranslate = zeromm
@@ -811,7 +817,7 @@ def MakeBottomHoles(self, obj):
 
                     p = App.ActiveDocument.addObject("Part::RegularPolygon")
                     p.Polygon = nSides
-                    p.Circumradius = obj.MagnetHoleDiameter / 2
+                    p.Circumradius = radius
                     p.Placement = App.Placement(App.Vector(-hole_pos, -hole_pos, -obj.TotalHeight), rot)
                     p.recompute()
                     f = Part.Face(Part.Wire(p.Shape.Edges))
@@ -820,7 +826,7 @@ def MakeBottomHoles(self, obj):
 
                     p = App.ActiveDocument.addObject("Part::RegularPolygon")
                     p.Polygon = nSides
-                    p.Circumradius = obj.MagnetHoleDiameter / 2
+                    p.Circumradius = radius
                     p.Placement = App.Placement(App.Vector(hole_pos, -hole_pos, -obj.TotalHeight), rot)
                     p.recompute()
                     f = Part.Face(Part.Wire(p.Shape.Edges))
@@ -829,7 +835,7 @@ def MakeBottomHoles(self, obj):
 
                     p = App.ActiveDocument.addObject("Part::RegularPolygon")
                     p.Polygon = nSides
-                    p.Circumradius = obj.MagnetHoleDiameter / 2
+                    p.Circumradius = radius
                     p.Placement = App.Placement(App.Vector(-hole_pos, hole_pos, -obj.TotalHeight), rot)
                     p.recompute()
                     f = Part.Face(Part.Wire(p.Shape.Edges))
@@ -838,7 +844,7 @@ def MakeBottomHoles(self, obj):
 
                     p = App.ActiveDocument.addObject("Part::RegularPolygon")
                     p.Polygon = nSides
-                    p.Circumradius = obj.MagnetHoleDiameter / 2
+                    p.Circumradius = radius
                     p.Placement = App.Placement(App.Vector(hole_pos, hole_pos, -obj.TotalHeight), rot)
                     p.recompute()
                     f = Part.Face(Part.Wire(p.Shape.Edges))
