@@ -933,7 +933,7 @@ def MakeBottomHoles(self, obj):
 
                     p = App.ActiveDocument.addObject("Part::RegularPolygon")
                     p.Polygon = nSides
-                    p.Circumradius = obj.MagnetHoleDiameter / 2
+                    p.Circumradius = radius
                     p.Placement = App.Placement(
                         App.Vector(-hole_pos, -hole_pos, -obj.TotalHeight), rot
                     )
@@ -944,7 +944,7 @@ def MakeBottomHoles(self, obj):
 
                     p = App.ActiveDocument.addObject("Part::RegularPolygon")
                     p.Polygon = nSides
-                    p.Circumradius = obj.MagnetHoleDiameter / 2
+                    p.Circumradius = radius
                     p.Placement = App.Placement(
                         App.Vector(hole_pos, -hole_pos, -obj.TotalHeight), rot
                     )
@@ -955,7 +955,7 @@ def MakeBottomHoles(self, obj):
 
                     p = App.ActiveDocument.addObject("Part::RegularPolygon")
                     p.Polygon = nSides
-                    p.Circumradius = obj.MagnetHoleDiameter / 2
+                    p.Circumradius = radius
                     p.Placement = App.Placement(
                         App.Vector(-hole_pos, hole_pos, -obj.TotalHeight), rot
                     )
@@ -966,7 +966,7 @@ def MakeBottomHoles(self, obj):
 
                     p = App.ActiveDocument.addObject("Part::RegularPolygon")
                     p.Polygon = nSides
-                    p.Circumradius = obj.MagnetHoleDiameter / 2
+                    p.Circumradius = radius
                     p.Placement = App.Placement(
                         App.Vector(hole_pos, hole_pos, -obj.TotalHeight), rot
                     )
