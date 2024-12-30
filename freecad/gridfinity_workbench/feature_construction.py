@@ -918,17 +918,16 @@ def MakeBottomHoles(self, obj):
     xtranslate = zeromm
     ytranslate = zeromm
 
-    # Ratio of 2/sqrt(3) converts from inscribed circle radius to circumscribed circle radius
-    # radius = (obj.MagnetHoleDiameter / 2 ) * 2 / np.sqrt(3)
-    radius = obj.MagnetHoleDiameter / np.sqrt(3)
-
     if obj.MagnetHoles:
         for x in range(obj.xGridUnits):
             ytranslate = zeromm
             for y in range(obj.yGridUnits):
                 if obj.MagnetHolesShape == "Hex":
-                    nSides = 6
+                    # Ratio of 2/sqrt(3) converts from inscribed circle radius to circumscribed circle radius
+                    # radius = (obj.MagnetHoleDiameter / 2 ) * 2 / np.sqrt(3)
+                    radius = obj.MagnetHoleDiameter / np.sqrt(3)
 
+                    nSides = 6
                     rot = App.Rotation(App.Vector(0, 0, 1), 0)
 
                     p = App.ActiveDocument.addObject("Part::RegularPolygon")
