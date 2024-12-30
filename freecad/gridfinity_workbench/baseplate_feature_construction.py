@@ -55,7 +55,7 @@ def MakeBaseplateMagnetHoles(self, obj):
         )
         p.recompute()
         f = Part.Face(Part.Wire(p.Shape.Edges))
-        C1 = f.extrude(App.Vector(0, 0, obj.MagnetHoleDepth))
+        C1 = f.extrude(App.Vector(0, 0, -obj.MagnetHoleDepth))
         App.ActiveDocument.removeObject(p.Name)
 
         p = App.ActiveDocument.addObject("Part::RegularPolygon")
@@ -66,7 +66,7 @@ def MakeBaseplateMagnetHoles(self, obj):
         )
         p.recompute()
         f = Part.Face(Part.Wire(p.Shape.Edges))
-        C2 = f.extrude(App.Vector(0, 0, obj.MagnetHoleDepth))
+        C2 = f.extrude(App.Vector(0, 0, -obj.MagnetHoleDepth))
         App.ActiveDocument.removeObject(p.Name)
 
         p = App.ActiveDocument.addObject("Part::RegularPolygon")
@@ -77,7 +77,7 @@ def MakeBaseplateMagnetHoles(self, obj):
         )
         p.recompute()
         f = Part.Face(Part.Wire(p.Shape.Edges))
-        C3 = f.extrude(App.Vector(0, 0, obj.MagnetHoleDepth))
+        C3 = f.extrude(App.Vector(0, 0, -obj.MagnetHoleDepth))
         App.ActiveDocument.removeObject(p.Name)
 
         p = App.ActiveDocument.addObject("Part::RegularPolygon")
@@ -88,7 +88,7 @@ def MakeBaseplateMagnetHoles(self, obj):
         )
         p.recompute()
         f = Part.Face(Part.Wire(p.Shape.Edges))
-        C4 = f.extrude(App.Vector(0, 0, obj.MagnetHoleDepth))
+        C4 = f.extrude(App.Vector(0, 0, -obj.MagnetHoleDepth))
         App.ActiveDocument.removeObject(p.Name)
 
         # HM1 = Part.Solid.multiFuse(C1, [C2, C3, C4, CA1, CA2, CA3, CA4])
