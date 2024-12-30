@@ -91,8 +91,7 @@ def MakeBaseplateMagnetHoles(self, obj):
         C4 = f.extrude(App.Vector(0, 0, -obj.MagnetHoleDepth))
         App.ActiveDocument.removeObject(p.Name)
 
-        # HM1 = Part.Solid.multiFuse(C1, [C2, C3, C4, CA1, CA2, CA3, CA4])
-        HM1 = Part.Solid.multiFuse(C1, [C2, C3, C4])
+        HM1 = Part.Solid.multiFuse(C1, [C2, C3, C4, CA1, CA2, CA3, CA4])
 
     else:  # round
         C1 = Part.makeCylinder(
